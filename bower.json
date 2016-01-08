@@ -1,0 +1,20 @@
+{
+  "name": "NAME",
+  "description": "DESCRIPTION",
+  "main": "",
+  "authors": [
+    "Tsachi Shlidor <tsi>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tsi/gulp-boilerplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

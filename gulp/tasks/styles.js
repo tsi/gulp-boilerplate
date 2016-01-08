@@ -17,5 +17,5 @@ gulp.task('css', function(done) {
     // }))
     // .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest(paths.destDir + '/css'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.stream());
 });
