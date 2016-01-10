@@ -24,8 +24,7 @@ gulp.task('js', function (done) {
       .pipe(gulp.dest(paths.destDir + '/js'))
       .pipe(uglify())
       .pipe(rename({ extname: '.min.js' }))
-      .pipe(gulp.dest(paths.destDir + '/js'))
-      .pipe(browserSync.stream());
+      .pipe(gulp.dest(paths.destDir + '/js'));
   });
 
   return eventStream.concat.apply(null, tasks);
