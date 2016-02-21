@@ -1,11 +1,8 @@
 var gulp = require('gulp');
 var compass = require('gulp-compass');
-var browserSync = require('browser-sync');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
 
-gulp.task('css', function(done) {
-  return gulp.src(paths.sassSrc + '/**/*.scss')
+gulp.task('css', function() {
+  return gulp.src(paths.srcDir + '/scss/**/*.scss')
     .pipe(compass({
       config_file: './config.rb',
       sass: paths.srcDir + '/scss',

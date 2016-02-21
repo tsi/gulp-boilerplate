@@ -5,7 +5,6 @@ var eventStream = require('event-stream');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
-var browserSync = require("browser-sync");
 
 gulp.task('js', function (done) {
 
@@ -21,9 +20,10 @@ gulp.task('js', function (done) {
   var tasks = folders.map(function(folder) {
     return gulp.src(path.join(paths.srcDir + '/js', folder, '/*.js'))
       .pipe(concat(folder + '.js'))
-      .pipe(gulp.dest(paths.destDir + '/js'))
-      .pipe(uglify())
-      .pipe(rename({ extname: '.min.js' }))
+      // Create minified version
+      // .pipe(gulp.dest(paths.destDir + '/js'))
+      // .pipe(uglify())
+      // .pipe(rename({ extname: '.min.js' }))
       .pipe(gulp.dest(paths.destDir + '/js'));
   });
 

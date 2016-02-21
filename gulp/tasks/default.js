@@ -7,11 +7,11 @@ var runSequence = require('run-sequence');
 gulp.task('default', function() {
   runSequence(
     ['js', 'css', 'wiredep'], // Asynchronous
-    'usemin',
     'browser-sync',
     function() {
-      gulp.watch([paths.srcDir + '/scss/*.scss', paths.srcDir + '/scss/**/*.scss'], ['css']);
-      gulp.watch([paths.srcDir + '/js/*.js', paths.srcDir + '/js/**/*.js'], ['js']);
+      gulp.watch([paths.srcDir + '/scss/**/*.scss'], ['css']);
+      gulp.watch([paths.srcDir + '/js/**/*.js'], ['js']);
+      gulp.watch([paths.srcDir + '/index.html'], ['wiredep']);
     }
   );
 });
